@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.Tony.Dao.UserDao">
+    <!--配置查询所有,findAll为方法名称-->
+    <select id="findAll" resultType="cn.Tony.domain.User">
+        select * from user
+    </select>
+
+    <!--保存User-->
+    <insert id="saveUser" parameterType="cn.Tony.domain.User">
+        insert into
+        USER(username, birthday, sex, address)
+        value(#{username},#{birthday},#{sex},#{address});
+    </insert>
+
+    <!--更新User-->
+    <update id="updateUser" parameterType="cn.Tony.domain.User">
+        update user set
+        username=#{username},birthday=#{birthday},sex=#{sex},address=#{address}
+        where id=#{id}
+    </update>
+
+    <!--删除User-->
+    <delete id="deleteUser" parameterType="java.lang.Integer">
+        delete from user where id = #{userId}
+    </delete>
+
+</mapper>

@@ -13,21 +13,20 @@
             <!--配置连接池-->
             <dataSource type="POOLED">
                 <!--配置连接数据库的4个基本信息-->
-                <property name="driver" value="com.mysql.cj.jdbc.Driver"/>
-                <property name="url" value="jdbc:mysql://localhost:3306/mybatis_study?useSSL=true&amp;serverTimezone=UTC&amp;characterEncoding=UTF-8"/>
-                <property name="username" value="root"/>
-                <property name="password" value="123456"/>
+                <property name="driver" value="com.mysql.cj.jdbc.Driver"></property>
+                <property name="url" value="jdbc:mysql://localhost:3306/mybatis_study?useSSL=true&amp;serverTimezone=UTC&amp;characterEncoding=UTF-8"></property>
+                <property name="username" value="root"></property>
+                <property name="password" value="123456"></property>
             </dataSource>
         </environment>
     </environments>
 
     <!--指定映射配置文件的位置，映射配置文件是指的是每个Dao独立的配置文件-->
-   <!-- <mappers>   使用注解模式，该文件不需要了
+    <mappers>
         <mapper resource="cn/Tony/dao/UserDao.xml"/>
     </mappers>
--->
     <!--使用注解配置-->
-    <mappers>
+  <!--  <mappers>
         <mapper class="cn.Tony.Dao.UserDao" />
-    </mappers>
+    </mappers>-->
 </configuration>

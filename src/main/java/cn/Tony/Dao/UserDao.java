@@ -14,7 +14,21 @@ public interface UserDao {
      * @return
      */
 
-    @Select("select * from user")
+
     List<User> findAll();
 
+    /**
+     * 保存方法
+     */
+    void saveUser(User user);
+
+    /**
+     * 更新User
+     */
+    void updateUser(User user);
+
+    /**
+     * 根据UserId删除User
+     */
+    void deleteUser(Integer userId);
 }
