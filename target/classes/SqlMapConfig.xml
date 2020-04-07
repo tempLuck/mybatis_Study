@@ -22,8 +22,12 @@
     </environments>
 
     <!--指定映射配置文件的位置，映射配置文件是指的是每个Dao独立的配置文件-->
-    <mappers>
+   <!-- <mappers>   使用注解模式，该文件不需要了
         <mapper resource="cn/Tony/dao/UserDao.xml"/>
     </mappers>
-
+-->
+    <!--使用注解配置-->
+    <mappers>
+        <mapper class="cn.Tony.Dao.UserDao" />
+    </mappers>
 </configuration>
